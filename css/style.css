@@ -1273,6 +1273,7 @@ ol.list-num-count.list-outline-none > li:before {background-color:transparent;	c
 .bg-primary{background-color:#000;}
 .bg-secondry{background-color:#efefef;}
 .bg-white{background-color:#FFF;}
+.bg-white-transparent{background: rgba(255,255,255,0.8);}
 .bg-black{background-color:#000;}
 .bg-black-light{background-color:#212121;}
 .bg-gray{background-color:#f6f7f8;}
@@ -3351,7 +3352,15 @@ ol.comment-list li.comment .comment-respond .comment-form p {	padding:0 15px !im
 /*-------------------------------------
 	2. when header is sticky 
 -------------------------------------*/  
-.is-fixed .logo-header {	height:70px;	}
+.is-fixed .logo-header {	height:70px;}
+
+@media only screen and (min-width:991px) {
+.is-fixed .logo-header{  width:265px;} 
+
+}
+@media only screen and (max-width:480px) {
+.is-fixed .logo-header{  width:165px;} 
+}
 
 /*======================================
 17. MAIN BAR ( place logo & main-navigation )
@@ -3904,7 +3913,6 @@ header .logo{	display:block;	padding:4px 0;}
 	-o-box-shadow:7px 0 5px rgba(0, 0, 0, 0.1);
 }
 .vnav-btn {
-    background: #fff none repeat scroll 0 0;
     color: #333;
     cursor: pointer;
     display: block;
@@ -3976,21 +3984,6 @@ header .logo{	display:block;	padding:4px 0;}
 .vertical-nav ul > li > a:focus { background:none; text-decoration: none;  color: #000;}
 .vertical-nav ul > li .mega-menu > li:after{	display:none;}
 
-.vertical-nav ul > li:after{
-	content:"";
-	position:absolute;
-	left:15px;
-	top:30px;
-	border-bottom:1px dashed #000;
-	height:2px;
-	width:0%;
-	z-index:-1;
-	-webkit-transition:all 0.5s linear;
-	-moz-transition:all 0.5s linear;
-	-ms-transition:all 0.5s linear;
-	-o-transition:all 0.5s linear;
-	transition:all 0.5s linear;
-}
 .vertical-nav ul > li:hover:after{
 	width:90%;
 }
